@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Demonstração de um site de barbearia. Serviços e preços fictícios; marcações desativadas." />
+  <meta name="theme-color" content="#171818" />
+  <title>Atelier do Corte — Demonstração</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23171818'/%3E%3Ctext x='32' y='47' font-size='46' font-family='Georgia' text-anchor='middle' fill='%23c69b68'%3EA%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="demo-banner" role="status">SITE DEMONSTRATIVO · MARCAÇÕES DESATIVADAS</div>
+  <header class="site-header" id="inicio">
+    <a class="brand" href="#inicio" aria-label="Atelier do Corte, início"><span class="brand-mark">A</span><span>ATELIER <small>DO CORTE</small></span></a>
+    <nav aria-label="Navegação principal"><a href="#servicos">Serviços</a><a href="#marcacao" class="nav-book">Explorar horários ↗</a></nav>
+  </header>
+  <main>
+    <section class="intro">
+      <div class="intro-copy"><p class="eyebrow"><span class="eyebrow-rule"></span> BARBEARIA · EST. 2026</p><h1>O teu próximo<br /><em>corte</em> começa<br />aqui.</h1><p class="intro-text">Explora os serviços, preços e a experiência de marcação deste projeto demonstrativo.</p><a class="intro-link" href="#servicos">Explorar serviços <span aria-hidden="true">↓</span></a><p class="intro-foot">Terça a sábado <span>·</span> 10:00–18:30</p></div>
+      <div class="intro-photo" role="img" aria-label="Fotografia de barbeiro a cortar cabelo com tesoura numa barbearia"><div class="photo-caption"><span aria-hidden="true">✂</span><span>PRECISÃO EM CADA DETALHE</span></div></div>
+    </section>
+    <section class="services-section" id="servicos">
+      <div class="section-heading"><div><p class="eyebrow">01 / SERVIÇOS</p><h2>Escolhe o teu<br /><em>ritual.</em></h2></div><p>Preços apresentados para esta barbearia fictícia.</p></div>
+      <div class="service-grid" id="serviceGrid"></div>
+    </section>
+    <section class="booking-section" id="marcacao">
+      <div class="booking-intro"><p class="eyebrow">02 / DEMONSTRAÇÃO</p><h2>Um momento<br /><em>para ti.</em></h2><p>Podes experimentar a escolha de um serviço, um dia e um horário. Esta demonstração não aceita nem guarda marcações.</p><div class="booking-note"><span>HORÁRIO FICTÍCIO</span><strong>Terça a sábado</strong><p>10:00–18:30 · Encerra domingo e segunda</p></div></div>
+      <div class="booking-panel"><div class="form-top"><span>EXPLORA A INTERFACE</span><span>DEMO / 2026</span></div>
+        <fieldset><legend>1. Seleciona um serviço</legend><div class="service-options" id="serviceOptions" role="group" aria-label="Serviços demonstrativos"></div></fieldset>
+        <fieldset><legend>2. Escolhe um dia e horário</legend><div class="calendar-surface"><div class="calendar-nav"><button type="button" id="previousMonth" aria-label="Mês anterior">←</button><strong id="calendarMonth"></strong><button type="button" id="nextMonth" aria-label="Mês seguinte">→</button></div><div class="calendar-weekdays" aria-hidden="true"><span>SEG</span><span>TER</span><span>QUA</span><span>QUI</span><span>SEX</span><span>SÁB</span><span>DOM</span></div><div class="calendar-grid" id="calendarGrid" aria-label="Calendário demonstrativo"></div></div><p class="calendar-help">Os horários mostrados são apenas exemplos; a disponibilidade real não é verificada.</p><p class="field-label slot-label">Horário de exemplo</p><div class="slot-options" id="slotOptions" role="group" aria-label="Horários demonstrativos"></div></fieldset>
+        <div class="booking-total"><span id="summaryService">Corte clássico <small>45 min · pagamento no local</small></span><strong id="summaryPrice">18 €</strong></div>
+        <button class="submit-button" type="button" disabled>Marcações desativadas</button><p class="privacy-note">Site de demonstração: não recolhe dados pessoais e não envia reservas.</p>
+      </div>
+    </section>
+  </main>
+  <footer><a class="brand" href="#inicio"><span class="brand-mark">A</span><span>ATELIER <small>DO CORTE</small></span></a><p>Conceito e preços fictícios · demonstração de portfólio</p><a href="#inicio">VOLTAR AO TOPO ↑</a></footer>
+</body>
+</html>
