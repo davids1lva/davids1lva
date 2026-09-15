@@ -78,3 +78,22 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 updatePortraitTransition();
+
+const siteCarousel = document.getElementById('siteCarousel');
+const siteRange = document.getElementById('siteRange');
+if (siteCarousel && siteRange) {
+  const syncSiteRange = () => {
+    const remaining = siteCarousel.scrollWidth - siteCarousel.clientWidth;
+    const value = remaining > 0 ? Math.round(siteCarousel.scrollLeft / remaining * 100) : 0;
+    siteRange.value = String(Math.min(100, Math.max(0, value)));
+    siteRange.style.setProperty('--site-progress', siteRange.value + '%');
+  };
+  siteRange.addEventListener('input', () => {
+    const remaining = siteCarousel.scrollWidth - siteCarousel.clientWidth;
+    siteCarousel.scrollLeft = remaining * Number(siteRange.value) / 100;
+    siteRange.style.setProperty('--site-progress', siteRange.value + '%');
+  });
+  siteCarousel.addEventListener('scroll', syncSiteRange, { passive: true });
+  window.addEventListener('resize', syncSiteRange);
+  syncSiteRange();
+}
